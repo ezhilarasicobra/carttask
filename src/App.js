@@ -13,12 +13,14 @@ function App() {
     { id:7,name: "Special Item", price: 280 },
     { id:8,name: "Popular Item", price: 40 },
   ];
+  
   const [productlist,setproductlist]=useState(productdata)
   const [cartlist,setCartlist]=useState([])
   const [total,SetTotal]=useState(0)
 let buttonclick=(productobj)=>{
   setCartlist([...cartlist,productobj])
   SetTotal(total+productobj.price)
+  setproductlist(productdata)
 }
 let removecart=(productobj)=>{
 let newcart=cartlist.filter((obj)=>obj.id!==productobj.id)
