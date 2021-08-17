@@ -1,8 +1,8 @@
 import React from "react";
+
 const Card = (props) => {
   return (
     <>
-    
      <div className="col-lg-3 mb-5">
         <div className="card h-100">
           <img

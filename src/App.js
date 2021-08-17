@@ -1,6 +1,9 @@
 import "./App.css";
 import Card from "./Card";
 import {useState} from 'react'
+import Navigation from "./Navigation";
+import Header from "./Header";
+import Footer from "./Footer"
 
 function App() {
   let productdata = [
@@ -29,11 +32,13 @@ SetTotal(total-productobj.price)
 }
   return (
     <div>
+<Navigation/>
+<Header/>
       <div className="container mt-5 ">
         <div className="row ">
           <div className="col-lg-2">
             <div>
-              <h1>CART</h1>
+              <h1 className="badge bg-dark text-white ms-1 rounded-pill">CART</h1>
               <ul className="list-group">
                 {
                   cartlist.map((item)=>{
@@ -58,6 +63,7 @@ SetTotal(total-productobj.price)
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
